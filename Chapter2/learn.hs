@@ -26,4 +26,14 @@ y = 10
         y = 10
        f = x + y
 
+    Answer: The problem here is that y has an initial preceding whitespace
+            than x does. White space matters in Haskell and is determined
+            by the first line in the module. If x also had a preceding 
+            whitespace than it would be ok (although it would still fail at
+            f). The solution is to remove the preceding white space:
+            
+            x = 7
+            y = 10
+            f = x + y
+
 -}
