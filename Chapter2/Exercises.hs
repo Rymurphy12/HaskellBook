@@ -31,3 +31,52 @@ paren3 = (2 ^ 2) * (4 ^ 4) + 1
     5. 2 * 5 + 18 and 2 * (5 + 18)
     Answer: Different (The parens force different precedence; 28 and 46)
 -}
+
+--More Fun With Functions Exercises
+
+--How it is written in file
+z = 7
+
+x = y ^ 2
+
+waxOn = x * 5
+
+y = z + 8
+
+{- In Order to get it to work in a REPL, y needs to be moved to immediately after z
+
+    z = 7
+
+    y = z + 8
+
+    x = y ^ 2
+
+    waxOn = x * 5
+
+    1. 10 + waxOn
+       Answer: 1135
+
+       (+10) waxOn
+       Answer: 1135
+
+       (-) 15 waxOn
+       Answer: -1110
+
+       (-) waxOn 15
+       Answer: 1110
+
+    3. Since waxOn is the value 1125, the result will be 3 * 1125 or 3375
+
+-}
+
+--Functions Exercise 4
+waxOnExp = x * 5
+    where z = 7
+          x = y ^ 2
+          y = z + 8
+
+--Functions Exercise 5
+triple x = x * 3
+
+--Functions Exercise 6
+waxOff x = triple x
