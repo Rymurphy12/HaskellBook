@@ -38,3 +38,23 @@ topLevelValue = 5
     Answer: Yes. r is now local to area's scope, as is d. This allows them to
             reference each other without issue.
 -}
+
+--Syntax Errors Exercise
+{-
+    Read the syntax of the following functions and decide whether it
+    will compile. Test them in your REPL and try to fix the syntax errors
+    where they occur.
+
+    1. ++ [1,2,3] [4,5,6]
+    Answer: Will not compile. ++ is a infix method, which means that it needs to go 
+            between both arugments. It can be used in prefix form, however, by wrapping
+            it up in parens.
+    2. '<3' ++ ' Haskell'
+    Answer: This also will not compile. Single quotes can only be used for type Char, which
+            are only one single character. To fix this issue, replace all of the single quotes
+            with double quotes.
+    3. concat ["<3", " Haskell"]
+    Answer: This will compile. concat takes a list of list a and in this case the arguments provided
+            are a list of String which is just syntaxtic sugar for a list of Char.
+
+-}
