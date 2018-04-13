@@ -1,5 +1,6 @@
 module Exercises3 where
 
+import Data.List.Split
 {- Reading Syntax Exercises
 
     1.For the following lines of code, read the syntax carefully and
@@ -52,3 +53,33 @@ module Exercises3 where
         Answer: b) [2,3,5,6,8,9]
 
 -}
+
+--Building FUnctions Exercises
+{-
+ 1. a) Given
+      "Curry is awesome"
+       Return
+      "Curry is awesome!"
+-}
+
+addExclam :: String -> String
+addExclam x = x ++ "!"
+
+{-
+ 1. b) Given
+      "Curry is awesome!"
+       Return
+      "y"
+-}
+
+drop4TakeHead :: String -> Char
+drop4TakeHead x = head (drop 4 x) 
+
+{-
+ 1. c) Given
+      "Curry is awesome!"
+       Return
+      "awesome!"
+-}
+takeLastWord :: String -> String
+takeLastWord x = last (splitOn " " x)
