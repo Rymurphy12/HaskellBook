@@ -1,6 +1,5 @@
 module Exercises3 where
 
-import Data.List.Split
 {- Reading Syntax Exercises
 
     1.For the following lines of code, read the syntax carefully and
@@ -54,9 +53,29 @@ import Data.List.Split
 
 -}
 
---Building FUnctions Exercises
+--Building Functions Exercises
 {-
  1. a) Given
+      "Curry is awesome"
+       Return
+      "Curry is awesome!"
+  Answer: "Curry is awesome" ++ "!"
+
+ 1. b) Given
+      "Curry is awesome!"
+       Return
+      "y"
+  Answer: head (drop 4 "Curry is awesome!") 
+
+ 1. c) Given
+      "Curry is awesome!"
+       Return
+      "awesome!"
+  Answer: drop 9 "Curry is awesome!"
+-}
+
+{-
+ 2. a) Given
       "Curry is awesome"
        Return
       "Curry is awesome!"
@@ -66,7 +85,7 @@ addExclam :: String -> String
 addExclam x = x ++ "!"
 
 {-
- 1. b) Given
+ 2. b) Given
       "Curry is awesome!"
        Return
       "y"
@@ -76,10 +95,38 @@ drop4TakeHead :: String -> Char
 drop4TakeHead x = head (drop 4 x) 
 
 {-
- 1. c) Given
+ 2. c) Given
       "Curry is awesome!"
        Return
       "awesome!"
 -}
-takeLastWord :: String -> String
-takeLastWord x = last (splitOn " " x)
+dropNine :: String -> String
+dropNine x = drop 9 x
+
+-- Exercise 3
+thirdLetter :: String -> Char
+thirdLetter x = x !! 2
+
+-- Exercise 4
+letterIndex :: Int -> Char
+letterIndex x = "Curry is Awesome!" !! x
+
+-- Exercise 5
+rvrs :: String
+rvrs = reversedString
+    where initialString = "Curry is Awesome"
+          curryString = take 5 initialString
+          isString = take 4 (drop 5 initialString)
+          awesomeString = drop 9 initialString
+          reversedString = awesomeString ++ isString ++ curryString
+
+--Exercise 6
+rvrs2 :: String -> String
+rvrs2 x = reversedString
+    where firstWord = take 5 x
+          secondWord = take 4 $ drop 5 x
+          thirdWord = drop 9 x
+          reversedString = thirdWord ++ secondWord ++ firstWord
+
+main :: IO ()
+main = print $ rvrs2 "Curry is Awesome"
