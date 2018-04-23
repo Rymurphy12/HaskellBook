@@ -1,5 +1,6 @@
 module MoodExercise where
 
+-- Mood Exercises
 data Mood = Blah | Woot deriving Show
 
 -- 1. What is the type constructor, or name of this type?
@@ -24,3 +25,26 @@ changeMood :: Mood -> Mood
 changeMood Blah = Woot
 changeMood Woot = Blah
 
+
+--Boolean Exercises
+{-
+  1. not True && true
+  Answer: The second "true" wasn't capitalized. 
+          Solution: not True && True
+
+  2. not (x = 6)
+  Answer: x = 6 is missing a second '=' for doing comparision
+          Solution: not (x == 6)
+
+  3. (1 * 2) > 5
+  Answer: No fixes needed.
+
+  4. [Merry] > [Happy]
+  Answer: I am assume that the solution should be a string rather than
+          a list of string so that is why I decided on.
+          Solution: "Merry" > "Happy"
+  5. [1, 2, 3] ++ "look at me!"
+  Answer: These are two different data types. In order for this to work, either [1,2,3] 
+          needs to be replaced with a string or "look at me!" needs to be replaced with
+          a list of ints. 
+-}
