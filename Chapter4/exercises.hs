@@ -87,5 +87,15 @@ allAwesome = [awesome, also]
               calling Int, the + function works. It returns 5.
               
       Prelude> (8 == 8) && ('b' < 'a')
+
+      Answer: This will work. The equality function and the less than
+              function both have two arguemetns taht are of the same
+              type. They also both evaluate to a Bool so the && function
+              can also evaluate them. It will return False.
+
       Prelude> (8 == 8) && 9
+
+      Answer: This will produce and error. The && function requires two
+              Bool arguements. While 8 == 8 reduces to a Bool, 9 reduces
+              to 9, in other words, an Int.
 -}
